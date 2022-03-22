@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.card {
+    width: 90%;
+    min-height: auto;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 30px;
+    position: relative;
+
+    background-color: #000000b9;
+    color: #ffffffb5;
+}
+
+.card-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 12px;
+}
+
+
+.card-search__button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    outline: none;
+    background-color: #7c7c7c5b;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.card-search__button:hover {
+    background-color: #7c7c7c2b;
+}
+
+.card-search__bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background-color: #7c7c7c5b;
+    color: white;
+    font-family: inherit;
+    font-size: 1.4rem;
+    width: 75%;
+    transition: 0.1s ease-in-out;
+}
+
+.card-search__bar::placeholder {
+    color: #f4f4f4;
+}
+
+.card-search__bar:hover {
+    background-color: #7c7c7c2b;
+}
+
+.card-weather__city {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.card-weather__main {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.card-weather__temp {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.card-weather__description {
+    margin: 0 auto 10px 10px;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.card-weather__humidity {
+    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.card-weather__wind {
+    margin: 4px auto 22x 10px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.card-weather.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: relative;
+}
+
+.card-weather.loading::after {
+    visibility: visible;
+    content: 'Loading...';
+    font-size: 16px;
+    position: absolute;
+}
